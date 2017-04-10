@@ -5,4 +5,9 @@ class Booking < ApplicationRecord
   scope :approved, -> { where(approved: true, paid: false) }
   scope :paid, -> { where(paid: true) }
   scope :pending, -> { where(approved: false) }
+  # @booking.pending => []
+
+  # def paid
+  #   where(paid: true)
+  # end
 end
