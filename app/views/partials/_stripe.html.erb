@@ -1,4 +1,4 @@
-<%= form_tag charges_path do %>
+<%= form_tag charges_path(booking.id) do %>
   <article>
     <% if flash[:error].present? %>
       <div id="error_explanation">

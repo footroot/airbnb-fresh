@@ -27,4 +27,27 @@
 	</tbody>
 </table>
 
+<h3>Already Paid</h3>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Start</th>
+			<th>End</th>
+			<th>Cost</th>
+			<th>Title</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @paid_bookings.each do |booking| %>
+			<tr>
+				<td><%= booking.start_date %></td>
+				<td><%= booking.end_date %></td>
+				<td><%= number_to_currency(booking.room.price) %></td>
+				<td><%= booking.room.title %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+
 <h3>Pending Approval</h3>
